@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useParams, useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {getMealCategories, getRecipes} from "../services/recipe.service";
 
 function CookBook() {
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
+    const [, setIsLoaded] = useState(false);
     const [categories, setCategories] = useState([]);
     const [recipes, setRecipes] = useState([]);
     const [state, setState] = useState({
@@ -37,7 +36,6 @@ function CookBook() {
         } else {
             params.delete("q")
         }
-        // history.name({search: params.toString()})
         history('../cookbook?q=' + state.value)
     }, [state.value, history])
 
@@ -46,7 +44,6 @@ function CookBook() {
     }
 
     const handleKeypress = (e: any) => {
-        //it triggers by pressing the enter key
         if (e.keyCode === 13) {
             handleSubmit(e);
         }
@@ -173,7 +170,8 @@ function Modal(props: any) {
                 <div className="fixed inset-0 w-full h-full bg-black opacity-70 z-0" onClick={props.click}></div>
 
                 {/*<div className={'relative w-full h-full flex items-center justify-center z-30'}>*/}
-                <div className={'bg-gray-600 w-11/12 md:w-6/12 p-5 md:p-10 pb-0 rounded-3xl text-center relative mx-auto mt-[50%] md:mt-[20%]'}>
+                <div
+                    className={'bg-gray-600 w-11/12 md:w-6/12 p-5 md:p-10 pb-0 rounded-3xl text-center relative mx-auto mt-[50%] md:mt-[20%]'}>
                     <img className={'inline-block h-32 relative top-[-100px]'}
                          src={props?.modalContent?.strCategoryThumb} alt={props.modalContent.name}/>
 

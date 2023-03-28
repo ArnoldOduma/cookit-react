@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {createBrowserRouter, RouterProvider, ScrollRestoration} from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from "./views/Login";
 import Root from "./routes/root";
 import ErrorPage from "./views/error-page";

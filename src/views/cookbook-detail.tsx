@@ -5,8 +5,6 @@ import {getMealDetails} from "../services/recipe.service";
 import ReactPlayer from "react-player";
 
 function CookBookDetail() {
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [recipe, setRecipe] = useState({
         strMealThumb: '',
@@ -15,7 +13,6 @@ function CookBookDetail() {
         strInstructions: '',
         strYoutube: ''
     });
-    const [ingredientThumb, setIngredientThumb] = useState([]);
     let {id} = useParams();
 
 
