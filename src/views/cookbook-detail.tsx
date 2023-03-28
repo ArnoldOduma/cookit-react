@@ -21,7 +21,7 @@ function CookBookDetail() {
             console.log(r);
             setRecipe(r.meals[0]);
         });
-    }, [])
+    }, [id])
 
     const replaceNewLine = (text: string) => {
         const items: string[] = [];

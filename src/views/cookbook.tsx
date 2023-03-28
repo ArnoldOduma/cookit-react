@@ -37,7 +37,7 @@ function CookBook() {
             params.delete("q")
         }
         history('../cookbook?q=' + state.value)
-    }, [state.value, history])
+    }, [state, history])
 
     function handleChange(event: any) {
         setState({value: event.target.value});
