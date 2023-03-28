@@ -22,7 +22,7 @@ function Root() {
         if (width > 768) {
             setShowNav(true)
         }
-    })
+    }, [])
 
     return (
         <>
